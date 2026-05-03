@@ -4,12 +4,12 @@ Thư mục này dùng để nộp minh chứng thiết lập môi trường lab.
 
 ## Sinh viên điền thông tin
 
-- Họ tên:
-- Mã sinh viên:
+- Họ tên: Nguyễn Đình Minh Hiếu
+- Mã sinh viên: 1771020269
 - Nhóm:
-- Vai trò dự kiến trong nhóm:
-- Hệ điều hành:
-- Ghi chú:
+- Vai trò dự kiến trong nhóm: Developer
+- Hệ điều hành: MacOS
+- Ghi chú: Đã Hoàn Thành
 
 ## Các file minh chứng nên có
 
