@@ -63,10 +63,10 @@ Client:
     Path:     /Users/hieu/.docker/cli-plugins/docker-scout
 
 Server:
- Containers: 3
-  Running: 2
+ Containers: 0
+  Running: 0
   Paused: 0
-  Stopped: 1
+  Stopped: 0
  Images: 14
  Server Version: 29.4.1
  Storage Driver: overlayfs
@@ -164,9 +164,38 @@ Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=pat
 8.4.46
 [PASS] ultralytics yolo version
 \n== Compose mini-stack check ==
- Container compose-nginx-1 Running 
- Container compose-redis-1 Running 
+ Network compose_default Creating 
+ Network compose_default Created 
+ Container compose-registry-1 Creating 
+ Container compose-nginx-1 Creating 
+ Container compose-redis-1 Creating 
+ Container compose-registry-1 Created 
+ Container compose-redis-1 Created 
+ Container compose-nginx-1 Created 
  Container compose-registry-1 Starting 
-Error response from daemon: ports are not available: exposing port TCP 0.0.0.0:5000 -> 127.0.0.1:0: listen tcp 0.0.0.0:5000: bind: address already in use
-[WARN] compose mini-stack could not start; maybe ports 8081/5000 are in use
+ Container compose-nginx-1 Starting 
+ Container compose-redis-1 Starting 
+ Container compose-redis-1 Started 
+ Container compose-nginx-1 Started 
+ Container compose-registry-1 Started 
+NAME                 IMAGE            COMMAND                  SERVICE    CREATED         STATUS                   PORTS
+compose-nginx-1      nginx:alpine     "/docker-entrypoint.…"   nginx      6 seconds ago   Up 5 seconds (healthy)   0.0.0.0:8081->80/tcp, [::]:8081->80/tcp
+compose-redis-1      redis:7-alpine   "docker-entrypoint.s…"   redis      6 seconds ago   Up 5 seconds (healthy)   6379/tcp
+compose-registry-1   registry:2       "/entrypoint.sh /etc…"   registry   6 seconds ago   Up 5 seconds             0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+[PASS] nginx reachable on localhost:8081
+[PASS] local registry reachable on localhost:5000
+ Container compose-nginx-1 Stopping 
+ Container compose-registry-1 Stopping 
+ Container compose-redis-1 Stopping 
+ Container compose-registry-1 Stopped 
+ Container compose-registry-1 Removing 
+ Container compose-registry-1 Removed 
+ Container compose-redis-1 Stopped 
+ Container compose-redis-1 Removing 
+ Container compose-redis-1 Removed 
+ Container compose-nginx-1 Stopped 
+ Container compose-nginx-1 Removing 
+ Container compose-nginx-1 Removed 
+ Network compose_default Removing 
+ Network compose_default Removed 
 \nALL CHECKS FINISHED. Read evidence/buoi-01/smoke-test-result.txt for details.
