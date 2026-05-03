@@ -1,0 +1,12 @@
+# Tool versions
+Sun May  3 13:17:10 +07 2026
+
+git version 2.50.1 (Apple Git-155)
+Docker version 29.4.1, build 055a478
+Docker Compose version v5.1.3
+./scripts/collect_session01_evidence.sh: line 12: node: command not found
+./scripts/collect_session01_evidence.sh: line 13: npm: command not found
+./scripts/collect_session01_evidence.sh: line 14: python: command not found
+Python 3.9.6
+./scripts/collect_session01_evidence.sh: line 15: pip: command not found
+pip 21.2.4 from /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site-packages/pip (python 3.9)
